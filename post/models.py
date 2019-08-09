@@ -1,4 +1,5 @@
 from django.db import models
+from django.shortcuts import reverse
 
 # Create your models here.
 
@@ -18,7 +19,7 @@ class Entry(models.Model):
     publish = models.BooleanField(default = True)
     date_created = models.DateTimeField(auto_now_add = True)
     date_modified = models.DateTimeField(auto_now = True)
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag, related_name='tags')
 
     class Meta :
         verbose_name_plural = "Entries"
@@ -27,4 +28,5 @@ class Entry(models.Model):
     def __str__(self) :
         return self.title
 
-    
+    def get_absolute_url(self) :
+        return reverse('post:post-detail', kwargs = {'slug' : self.slug})
