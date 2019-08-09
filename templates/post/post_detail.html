@@ -13,7 +13,8 @@
                 <p class="meta"> {{ entry.date_created|date:"d F, Y" }}</p>
                 <p class="mt-3">
                     {% for tag in entry.tags.all %}
-                    <a href="#" class="badge badge-light p-2 my-1">{{ tag.tag }}</a>
+                    <a href="{% url 'post:filter-by-tag' slug=tag.tag %}"
+                        class="badge badge-light p-2 my-1">{{ tag.tag }}</a>
                     {% endfor %}
                 </p>
                 <hr class="mb-4">
