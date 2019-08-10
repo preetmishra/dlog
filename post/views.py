@@ -41,3 +41,6 @@ class FilterByTagView(TemplateView):
         return render(request, self.template_name, {'entries': entries,
                                                     'tag_list': tag_list,
                                                     'tag_selected': tag})
+
+class AboutView(TemplateView):
+    template_name = 'post/about.html'

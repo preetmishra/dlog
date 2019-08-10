@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Favicon -->
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon/favicon.ico' %}"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <title>
         {% block title %} {% endblock title %}
@@ -29,7 +29,7 @@
     
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-md navbar-light">
-        <a class="navbar-brand navbarlink" href="{% url 'post:index' %}">wickedmishra</a>
+        <a class="navbar-brand navbarlink" href="{% url 'post:index' %}">< / w i c k e d m i s h r a ></a>
         <!-- For navbar collapse -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
             <span><i class="fas fa-bars" id="navbartoggle"></i></span>
@@ -38,10 +38,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link navbarlink active" href="{% url 'post:index' %}">blog</a>
+                    <a class="nav-link navbarlink active" href="{% url 'post:index' %}">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navbarlink" href="#">about</a>
+                    <a class="nav-link navbarlink" href="{% url 'post:about' %}">About</a>
                 </li>
             </ul>
         </div>
