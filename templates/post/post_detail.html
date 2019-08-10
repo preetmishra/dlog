@@ -1,24 +1,28 @@
 {% extends 'base.html' %}
 {% load martortags %}
 
-{% block title %} wickedmishra {% endblock title %}
+{% block title %} {{object.title}} | wickedmishra {% endblock title %}
 
 {% block body_block %}
 <div class="container">
-    <div class="row my-3">
+    <div class="row my-2">
         <div class="col-md-1"></div>
         <div class="col-md-10">
             <div>
-                <h2>{{ object.title }}</h2>
-                <p class="meta"> {{ entry.date_created|date:"d F, Y" }}</p>
-                <p class="mt-3">
-                    {% for tag in entry.tags.all %}
-                    <a href="{% url 'post:filter-by-tag' slug=tag.tag %}"
-                        class="badge badge-light p-2 my-1">{{ tag.tag }}</a>
-                    {% endfor %}
-                </p>
-                <hr class="mb-4">
-                {{ object.body|safe_markdown }}
+                <div class="card border-0 mb-3">
+                    <div class="card-body">
+                        <h2>{{ object.title }}</h2>
+                        <p class="meta"> {{ entry.date_created|date:"d F, Y" }}</p>
+                        <p class="mt-2">
+                            {% for tag in entry.tags.all %}
+                            <a href="{% url 'post:filter-by-tag' slug=tag.tag %}"
+                                class="badge badge-light p-2 my-1">{{ tag.tag }}</a>
+                            {% endfor %}
+                        </p>
+                        {{ object.body|safe_markdown }}
+                        <hr class="mt-5">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-md-1"></div>
