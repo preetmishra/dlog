@@ -2,6 +2,27 @@ a:hover{
     text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 40px auto;
+}
+
+blockquote {
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: .25em solid #dfe2e5;
+}
+
+pre {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 16px;
+    color: #24292E;
+    background-color: #F6F8FA;
+}
+
 #entry_title{
     color: black;
 }
@@ -10,8 +31,4 @@ a:hover{
     padding: 1.2rem;
 }
 
-pre {
-    padding: 16px;
-    color: #24292E;
-    background-color: #F6F8FA;
-}
+

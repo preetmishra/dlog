@@ -1,0 +1,17 @@
+a:hover{
+    text-decoration: none;
+}
+
+#entry_title{
+    color: black;
+}
+
+.navbar{
+    padding: 1.2rem;
+}
+
+pre {
+    padding: 16px;
+    color: #24292E;
+    background-color: #F6F8FA;
+}
