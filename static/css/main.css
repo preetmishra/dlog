@@ -31,4 +31,7 @@ pre {
     padding: 1.2rem;
 }
 
-
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,0.8);
+    border-color: rgba(0,0,0,0);
+}
