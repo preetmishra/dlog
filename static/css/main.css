@@ -35,3 +35,46 @@ pre {
     color: rgba(0,0,0,0.8);
     border-color: rgba(0,0,0,0);
 }
+
+/* tables */
+table {
+    padding: 0;
+    margin: 30px 0;
+}
+
+table tr {
+    border-top: 1px solid #dfe2e5;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+table tr:nth-child(2n) {
+    background-color: #F6F8FA;
+}
+
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr td {
+    border: 1px solid #dfe2e5;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr th :first-child,
+table tr td :first-child {
+    margin-top: 0;
+}
+
+table tr th :last-child,
+table tr td :last-child {
+    margin-bottom: 0;
+}
+/* end of tables */
