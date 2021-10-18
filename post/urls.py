@@ -5,7 +5,4 @@ app_name = 'post'
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
-    path('about/', views.AboutView.as_view(), name='about'),
-    path('post/<str:slug>/', views.PostDetailView.as_view(), name='post-detail'),
-    path('tag/<str:slug>/', views.FilterByTagView.as_view(), name='filter-by-tag'),
 ]

@@ -1,55 +1,17 @@
 {% extends 'base.html' %}
 {% load martortags %}
 
-{% block title %} Blog {% endblock title %}
+{% block title %} Preet Mishra {% endblock title %}
 
 {% block body_block %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            {% if tag_selected %}
-            <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
-                Showing results for <strong>{{ tag_selected }}</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            {% endif %}
-            {% for entry in entries %}
-            <div class="card border-0 my-2">
-                <div class="card-body">
-                    <h2><a href="{% url 'post:post-detail' slug=entry.slug %}" id="entry_title">{{ entry.title }}</a>
-                    </h2>
-                    <p class="text-muted">
-                        {{ entry.date_created|date:"jS F, Y" }}
-                    </p>
-                    <p class="mt-3">
-                        {% for tag in entry.tags.all %}
-                        <a href="{% url 'post:filter-by-tag' slug=tag.tag %}"
-                            class="badge badge-light p-2 my-1">{{ tag.tag }}</a>
-                        {% endfor %}
-                        <p>{{ entry.body|safe_markdown|slice:"128"}}...</p>
-                        <a href="{% url 'post:post-detail' slug=entry.slug %}">Read more</a>
-                    </p>
-                </div>
-            </div>
-            <hr class="my-0 py-0 px-5 mx-4">
-            {% endfor %}
-        </div>
-        <div class="col-md-4 d-sm-none d-none d-sm-block">
-            <div class="card border-0 my-2">
-                <div class="card-body text-right">
-                    <h2 class="mb-3">Tags</h2>
-                    <a href="{% url 'post:filter-by-tag' slug="all" %}"
-                        class="badge badge-light p-2 my-1">all</a>
-                    {% for tag in tag_list %}
-                    <a href="{% url 'post:filter-by-tag' slug=tag.tag %}"
-                        class="badge badge-light p-2 my-1">{{ tag.tag }}</a>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="d-flex flex-column justify-content-center align-items-center h-100 text-monospace">
+    <p>
+        Hey 👋
+    </p>
+    <p class="text-center">
+        I've moved to <a href="https://preetmishra.com">https://preetmishra.com</a>
+    </p>
 </div>
+
 {% endblock body_block %}
